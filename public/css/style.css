@@ -1,0 +1,107 @@
+.mt-20 {
+	margin-top: 20px;
+}
+footer {
+	height: 80px;
+	margin-top: 50px;
+}
+footer>.container, footer .row {
+	height: 100%;
+}
+
+.page_warapper{
+	margin: 50px auto;
+	box-shadow: 0 0 20px #ccc;
+	border-radius: 15px; /* to make the borders rounded */
+	padding: 20px 15px; /* to space between content and the box */
+}
+
+.page_warapper h1{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+
+.card_block{
+	padding: 15px;
+}
+
+.w10{
+	width: 10%;
+}
+
+.w60{
+	width: 60%;
+}
+
+.w20{
+	width: 20%;
+}
+
+.w25{
+	width: 25%;
+}
+
+
+.w100{
+	width: 100%;
+}
+
+.articles{
+	margin-top: 15px;;
+}
+
+.article-inline{
+	padding-left: 10px;
+	flex-wrap: wrap;
+}
+
+.article-inline:nth-of-type(odd){
+	background: rgba(0,0,0,0.1);
+}
+
+
+/* for the details of each article page */
+
+.sight_container {
+	margin-top: 50px;
+	border-radius: 15px;
+	box-shadow: 0 0 10px grey;
+	padding: 15px 50px;
+}
+
+
+.sight_container h1{
+	text-align: center;
+}
+
+.sight_container img{
+	width: 100%;
+}
+
+.sight_container .date{
+	font-weight: bold;
+}
+ 
+.map {
+	height: 400px;
+}
+
+/* login page */
+
+.login_container {
+	margin-top: 50px;
+	border-radius: 15px;
+	box-shadow: 0 0 10px grey;
+	padding: 15px 50px;
+}
+
+
+.login_container h1{
+	margin-bottom: 10px;;
+	text-align: center;
+}
+
+#myTabContent{
+	margin-top: 20px;
+}

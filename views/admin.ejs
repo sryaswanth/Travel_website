@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <div class="container">
+		  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+		  	  <span class="navbar-toggler-icon"></span>
+		  	</button>
+		  	<a class="navbar-brand" href="/">Let's Travel</a>
+
+		  	<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+		  	  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+		  	    <li class="nav-item">
+		  	      <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+		  	    </li>
+		  	    <li class="nav-item">
+		  	      <a class="nav-link" href="#">About Us</a>
+		  	    </li>
+		  	    <li class="nav-item">
+		  	      <a class="nav-link" href="#">Contacts</a>
+				</li>
+				<li class="nav-item active">
+		  	      <a class="nav-link" href="/admin">Admin Page</a>
+            </li>  
+            
+            <li class="nav-item active">
+		  	      <button type="btn" class="btn btn-outline-secondary logout_button" >Log Out</button>
+		  	    </li>
+		  	  </ul>
+		  	  <form class="form-inline my-2 my-lg-0">
+		  	    <input class="form-control mr-sm-2" type="search" placeholder="Phone number" aria-label="Search">
+		  	    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Call me</button>
+		  	  </form>
+		  	</div>
+		  </div>
+		</nav>
+    </header>
+    
+    <main>
+
+        <div class="container page_warapper">
+            <h1>Admin Page</h1>
+            <hr>
+            <div class="row">
+
+                <div class="col-3">
+
+                    <div class="card">
+
+                        <div class="card_block">
+
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <a class="nav-link active" id="v-pills-articlest-tab" data-toggle="pill" href="#v-pills-articlest" role="tab" aria-controls="v-pills-articlest" aria-selected="true">Articles</a>
+                                <a class="nav-link" id="v-pills-mails-tab" data-toggle="pill" href="#v-pills-mails" role="tab" aria-controls="v-pills-mails" aria-selected="false">Mails</a>
+                                <a class="nav-link" id="v-pills-callbackrequests-tab" data-toggle="pill" href="#v-pills-callbackrequests" role="tab" aria-controls="v-pills-callbackrequests" aria-selected="false">Callback Requests</a>
+                        
+                              </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-9">
+
+                        <div class="card">
+
+                            <div class="card_block">
+
+                                <div class="tab-content" id="v-pills-tabContent">
+                                    <div class="tab-pane fade show active" id="v-pills-articlest" role="tabpanel" aria-labelledby="v-pills-articlest-tab">
+                                        <button class="btn-primary btn create_post_btn">Add Post</button>
+                                        <div class="articles">
+                        
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-mails" role="tabpanel" aria-labelledby="v-pills-mails-tab">Mails Content</div>
+                                    <div class="tab-pane fade" id="v-pills-callbackrequests" role="tabpanel" aria-labelledby="v-pills-callbackrequests-tab">call back content</div>
+                                    <div class="tab-pane fade" id="v-pills-add-post" role="tabpanel" aria-labelledby="v-pills-add-post-tab">
+                                      <h2>Create Post</h2>
+
+                                      <form class="creating_the_post_form">
+
+                                        <div class="form-group">
+                                          <label for="CreateTitle">Title</label>
+                                          <input type="text" class="form-control" id="CreateTitle" placeholder="Enter Title">
+                                        </div>
+
+                                        <div class="form-group">
+                                          <label for="CreateCountry">Location</label>
+                                          <input type="text" class="form-control" id="CreateCountry" placeholder="Enter Country Name">
+                                        </div>
+
+                                        <div class="form-group">
+                                          <label for="CreateImageURL">Image URL</label>
+                                          <input type="text" class="form-control" id="CreateImageURL" placeholder="Enter Image URL">
+
+                                          <p>Or</p>
+                                          
+                                          <label for="UploadFile">Upload File/Image</label>
+                                           <input type="file" class="form-control-file" id="UploadFile">
+
+                                        </div>
+
+                                        <div class="form-group">
+                                          <label for="CreateText">Text</label>
+                                          <textarea class="form-control" id="CreateText" rows="3"></textarea>
+                                        </div>
+
+                                        <button class="btn btn-primary">Create Post</button>
+
+                                      </form>
+
+                                    </div>
+
+
+                                    <!-- Update Form-->
+
+                                    <div class="tab-pane fade" id="v-pills-update-post" role="tabpanel" aria-labelledby="v-pills-update-post-tab">
+                                      <h2>Update Post</h2>
+
+                                      <form class="updating_the_post_form">
+
+                                        <div class="form-group">
+                                          <label for="updateTitle">Title</label>
+                                          <input type="text" class="form-control" id="updateTitle" placeholder="Enter Title">
+                                        </div>
+
+                      
+                                        <div class="form-group">
+                                          <label for="updateText">Text</label>
+                                          <textarea class="form-control" id="updateText" rows="3"></textarea>
+                                        </div>
+
+                                        <button class="btn btn-primary">Update Post</button>
+
+                                      </form>
+
+                                    </div>
+
+                                    <!-- end of update form-->
+                        
+                                  </div>
+                            
+                            </div>
+
+                        </div>
+                        
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/posts.js"></script>
+    <script src="/admin/js/create_post.js"></script>
+    <script src="/admin/js/update_post.js"> </script>
+    <script src="/admin/js/delete_post.js"></script>
+    <script src="/admin/js/callback_requests.js"></script>
+    <script src="/admin/js/emails.js"></script>
+    <script src="/admin/js/main.js"></script>
+</body>
+
+</html>
