@@ -18,7 +18,7 @@ update_block.addEventListener('click', async function(e){
 
         id = e.target.parentNode.parentNode.querySelector('.id').value;      // this selects the first parentNode (i.e) -> 'div' to delete, second parentNode (i.e) -> 'articles' it belongs too.
 
-        let required_details = await fetch('http://localhost:3000/posts/'+id)
+        let required_details = await fetch('/posts/'+id)
                                        .then((resp) => resp.json())
                                         .then((data) => data)              // done inorder to get the already existing data inorder to edit it
         
@@ -44,7 +44,7 @@ update_block.addEventListener('click', async function(e){
 updateform.addEventListener('submit', function(e){
     e.preventDefault();
 
-    fetch('http://localhost:3000/posts/'+id, { // since "id" is already obtained in the previous function we dont need to reinitialize and obtain it again, 'id' is keep in the scope for this full class
+    fetch('/posts/'+id, { // since "id" is already obtained in the previous function we dont need to reinitialize and obtain it again, 'id' is keep in the scope for this full class
 
     method : 'PUT',
 

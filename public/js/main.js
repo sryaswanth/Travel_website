@@ -34,7 +34,7 @@ callmeform.addEventListener('submit', (e) =>{
 
     let phoneinput = callmeform.querySelector('input');
 
-    fetch('http://localhost:3000/callback_requests',{
+    fetch('/callback_requests',{
         
         method: 'POST',
         headers : {

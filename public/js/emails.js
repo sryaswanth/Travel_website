@@ -3,7 +3,7 @@ let emailrequest = document.querySelector('.email_request_form');
 
 emailrequest.addEventListener('submit', (e) =>{     // here we move the entered content from the webpage into the server( req.body)
     e.preventDefault();
-    fetch('http://localhost:3000/emails', {    // here we send reposne to the server
+    fetch('/emails', {    // here we send reposne to the server
         method: 'POST',
         headers : {
             'Content-Type' : 'application/json'

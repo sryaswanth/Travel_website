@@ -1,5 +1,5 @@
 async function getemails() {
-    return await fetch('http://localhost:3000/emails')
+    return await fetch('/emails')
               .then((resp) => resp.json())
               .then((data) => data);
 }
@@ -12,7 +12,7 @@ emailsblock.addEventListener('click',function(e){     // if we click "x" we shou
         console.log("Yes im in");
         let id = e.target.parentNode.parentNode.querySelector('.id').value;      // this selects the first parentNode (i.e) -> 'div' to delete, second parentNode (i.e) -> 'articles' it belongs too.
         console.log(id);
-        fetch('http://localhost:3000/emails/'+ id,{
+        fetch('/emails/'+ id,{
             
             method: 'DELETE'
 

@@ -8,7 +8,7 @@ articleblock.addEventListener('click',function(e){
         console.log("Yes im in");
         let id = e.target.parentNode.parentNode.querySelector('.id').value;      // this selects the first parentNode (i.e) -> 'div' to delete, second parentNode (i.e) -> 'articles' it belongs too.
         console.log(id);
-        fetch('http://localhost:3000/posts/'+ id,{
+        fetch('/posts/'+ id,{
             
             method: 'DELETE'
 

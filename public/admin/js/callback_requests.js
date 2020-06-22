@@ -1,5 +1,5 @@
 async function getcallbackrequests() {
-    return await fetch('http://localhost:3000/callback_requests')
+    return await fetch('/callback_requests')
               .then((resp) => resp.json())
               .then((data) => data);
 }
@@ -15,7 +15,7 @@ callrequestsblock.addEventListener('click',function(e){
         console.log("Yes im in");
         let id = e.target.parentNode.parentNode.querySelector('.id').value;      // this selects the first parentNode (i.e) -> 'div' to delete, second parentNode (i.e) -> 'articles' it belongs too.
         console.log(id);
-        fetch('http://localhost:3000/callback_requests/'+ id,{
+        fetch('/callback_requests/'+ id,{
             
             method: 'DELETE'
 

@@ -18,7 +18,7 @@ createform.addEventListener('submit', (e)=>{    // getting the data from the for
     
     let texts = CreateText.value;
 
-    fetch('http://localhost:3000/posts',{
+    fetch('/posts',{
 
         method: 'POST',
 
@@ -60,7 +60,7 @@ createform.addEventListener('submit', (e)=>{    // getting the data from the for
     data.append('description', texts.substring(0, texts.indexOf('.') +1))
     data.append('imagefile' , createimagebyupload.files[0])   // since input type is a file and usually files are of the type 'array', so .files[0] is given
 
-    fetch('http://localhost:3000/posts',{
+    fetch('/posts',{
 
         method: 'POST',
         body: data

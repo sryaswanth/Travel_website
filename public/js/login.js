@@ -10,7 +10,7 @@ sign_in_form.addEventListener('submit', (e) => {
     let email = document.getElementById('sign_in_email').value;
     let password = document.getElementById('sign_in_password').value;
 
-    fetch('http://localhost:3000/users/login', {
+    fetch('/users/login', {
         method: 'POST',
 
         headers:{
@@ -50,7 +50,7 @@ register_form.addEventListener('submit', (e) => {
         return;
     }
 
-    fetch('http://localhost:3000/users/register', {
+    fetch('/users/register', {
         method: 'POST',
 
         headers:{
