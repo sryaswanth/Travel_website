@@ -53,7 +53,7 @@ let multer = require('multer')
 // method 2
 
 let imagestorage = multer.diskStorage({   // inorder to give name to the uploaded images inside the images files and specify its datatype
-    destination: (req, file, cbfunction) => cbfunction(null,'public/images'),      // cb('what has to be done incase if there is an error', path )
+    destination: (req, file, cbfunction) => cbfunction(null,'/images'),      // cb('what has to be done incase if there is an error', path )
     filename: (req, file, cbfunction) => cbfunction(null, file.originalname)
 });
 
