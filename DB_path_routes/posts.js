@@ -40,7 +40,7 @@ router.post('/',authmiddleware ,async(req,resp) =>{   // adding the data to the 
 
     else{
         console.log(req.file.path)
-        imgpath = req.file.path.substring(req.file.path.indexOf('\\'), req.file.path.length);   // inorder to avoid "public" in the path
+        imgpath = req.file.path.substring(req.file.path.indexOf('/'), req.file.path.length);   // inorder to avoid "public" in the path
         console.log(imgpath)
     }
 
