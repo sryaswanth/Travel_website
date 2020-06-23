@@ -62,7 +62,7 @@ app.use(multer({storage: imagestorage}).single('imagefile'))  // .single() indic
 let mongoose = require('mongoose');
 const { response } = require('express');
 
-mongoose.connect('mongodb://localhost/Travels', { useNewUrlParser: true }); // connecting to mongodb folder   // new URLparser - true is for the deprication warming in console
+mongoose.connect('mongodb+srv://YaswanthSR:Carnatic7!@mycluster-gmcwp.mongodb.net/Travels', { useNewUrlParser: true }); // connecting to mongodb folder   // new URLparser - true is for the deprication warming in console
 
 
 app.use('/posts', postRouter)   // redirect to the posts page inside DB_path_routes folder
