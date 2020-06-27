@@ -85,7 +85,9 @@ app.get('/sight', async (req,resp) =>{         // if we use path ".../sight", it
         imageurl : post.imageurl,
         date : post.date,
         text: post.text,
-        locate : post.country
+        locate : post.country,
+        lati : post.latitude,
+        longi : post.longitude
     })                 
 })
 
