@@ -2,6 +2,32 @@ let platform = new H.service.Platform({
     'apikey': 'en34chtTDgPzUOC--pz9j_sJOVmayizq-XrKnmEeelw'
   });
 
+
+
+// method 2
+
+let latitudedetail = document.querySelector('.latitudedetails').textContent;
+let longitudedetail = document.querySelector('.longitudedetails').textContent;
+
+let defaultLayers = platform.createDefaultLayers();            // layer of the map is created
+
+let map = new H.Map(                           // to initialize the map, we create a variable called map 
+  document.querySelector('.map'),        // insert the map
+  defaultLayers.vector.normal.map,         // specify the type of map (here: it is normal)
+  {                                              // third argument is a .js object with 2 obligatory conditions zoom and center
+    zoom: 10,
+    center: { lat: latitudedetail, lng: longitudedetail}
+  });
+
+  let ui = H.ui.UI.createDefault(map, defaultLayers);      // this is for zoom in and out 
+
+  let mark = new H.map.Marker({lat: latitudedetail, lng: longitudedetail});   // for markers on the map 
+    map.addObject(mark);
+
+
+
+/* method 1
+
 // this function is to provide landmark details
 function landmarkGeocode() {
     let title = document.querySelector('.locationss').textContent;
@@ -48,3 +74,5 @@ let map = new H.Map(                           // to initialize the map, we crea
 
 
 landmarkGeocode();
+
+*/

@@ -9,6 +9,10 @@ let CreateText = document.querySelector('#CreateText')
 
 let createimagebyupload = document.querySelector('#UploadFile')
 
+let createlatitude = document.querySelector("#createlatitude")
+let createlongitude = document.querySelector("#createlongitude")
+
+
 /*
 method 1
 
@@ -59,6 +63,10 @@ createform.addEventListener('submit', (e)=>{    // getting the data from the for
     data.append('text', CreateText.value)
     data.append('description', texts.substring(0, texts.indexOf('.') +1))
     data.append('imagefile' , createimagebyupload.files[0])   // since input type is a file and usually files are of the type 'array', so .files[0] is given
+
+    data.append('latitude', createlatitude.value)
+    data.append('latitude', createlongitude.value)
+
 
     fetch('/posts',{
 

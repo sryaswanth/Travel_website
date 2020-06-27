@@ -37,15 +37,19 @@ async function addpost() {
 
     test2.forEach((post) => {
         let postHTML = `<article class="d-flex justify-content-between align-items-center article-inline">
-        <div class="number w10">${order_number++}</div>
+        <div class="number w5">${order_number++}</div>
         <input class ="id" type="hidden" value ="${post.id}"> 
-        <div class="name w25">${post.title}</div>
+        <div class="name w20">${post.title}</div>
         <div class="date w20">${post.date}</div>
-        <div class="location w25">${post.country}</div>
-        <div class="edit w10">
+        <div class="location w15">${post.country}</div>
+
+        <div class="latitude w15">${post.latitude}</div>
+        <div class="longitude w15">${post.longitude}</div>
+
+        <div class="edit w5">
             <button class="btn btn-link btn-edit">Edit</button>
         </div>
-        <div class="remove w10">
+        <div class="remove w5">
             <button class="btn btn-link btn-remove">X</button>
         </div>
     </article>`;

@@ -10,7 +10,9 @@ let postschema = new Schema({
     country: String,
     text: String,
     imageurl: String,
-    id: String              // since we use uniquid package to genrated id's (this is of string type)
+    id: String,              // since we use uniquid package to genrated id's (this is of string type)
+    latitude: Number,
+    longitude : Number      // new data 
 
 });
 

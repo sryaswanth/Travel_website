@@ -40,7 +40,7 @@ router.post('/',authmiddleware ,async(req,resp) =>{   // adding the data to the 
 
     else{
         console.log(req.file.path)
-        imgpath = req.file.path.substring(req.file.path.indexOf('/'), req.file.path.length);   // inorder to avoid "public" in the path
+        imgpath = req.file.path.substring(req.file.path.indexOf('/'), req.file.path.length);   // inorder to avoid "public" in the path   /// here we use '/' incase if it is deployed to cloud, else if it si local then i used '\\' ->route directory specification type is an headache
         console.log(imgpath)
     }
 
@@ -52,6 +52,8 @@ router.post('/',authmiddleware ,async(req,resp) =>{   // adding the data to the 
         country: reqbody.country,
         text : reqbody.text,
         imageurl : imgpath,
+        latitude : reqbody.latitude[0],
+        longitude : reqbody.latitude[1]
 
     })
 
